@@ -34,7 +34,7 @@ def get_bonus(json):
         4: 'Red Bull',
         5: 'Miroir',
         6: 'Chapron',
-        7: 'Pat Evra'
+        7: 'Tonton Pat'
     }
     team = {
         1: "à domicile",
@@ -43,8 +43,6 @@ def get_bonus(json):
 
     if json['type']==4:
         return bonuses[json['type']] + " sur " + json['playerName']
-    elif json['type']==5:
-        return bonuses[json['type']] + " sur " + json['playerName'] + "(équipe " + team[json['team']] + ")"
     else:
         return bonuses[json['type']]
 
